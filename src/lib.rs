@@ -1,14 +1,14 @@
 use std::{env, fs};
 use zed_extension_api::{self as zed, Result};
 
-const SERVER_PATH: &str = "node_modules/twiggy-language-server/dist/server.js";
-const PACKAGE_NAME: &str = "twiggy-language-server";
+const SERVER_PATH: &str = "node_modules/vscode-antlers-language-server/dist/server.js";
+const PACKAGE_NAME: &str = "vscode-antlers-language-server";
 
-struct TwigExtension {
+struct StatamicAntlersExtension {
     did_find_server: bool,
 }
 
-impl TwigExtension {
+impl StatamicAntlersExtension {
     fn server_exists(&self) -> bool {
         fs::metadata(SERVER_PATH).map_or(false, |stat| stat.is_file())
     }
@@ -23,7 +23,7 @@ impl TwigExtension {
             &language_server_id,
             &zed::LanguageServerInstallationStatus::CheckingForUpdate,
         );
-        let version = "0.17.0".to_string();
+        let version = "2.2.0".to_string();
 
         if !server_exists
             || zed::npm_package_installed_version(PACKAGE_NAME)?.as_ref() != Some(&version)
@@ -54,7 +54,7 @@ impl TwigExtension {
     }
 }
 
-impl zed::Extension for TwigExtension {
+impl zed::Extension for StatamicAntlersExtension {
     fn new() -> Self {
         Self {
             did_find_server: false,
@@ -82,4 +82,4 @@ impl zed::Extension for TwigExtension {
     }
 }
 
-zed::register_extension!(TwigExtension);
+zed::register_extension!(StatamicAntlersExtension);
