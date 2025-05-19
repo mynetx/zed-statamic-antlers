@@ -1,15 +1,15 @@
-id = "twig"
-name = "Twig"
-version = "0.2.0"
+id = "statamic-antlers"
+name = "Statamic Antlers"
+version = "0.1.0"
 schema_version = 1
-authors = ["Yussuf Sassi <yussuf@tuta.io>"]
-description = "Syntax highlighting and Intellisense for Twig in Zed"
-repository = "https://github.com/YussufSassi/zed-twig"
+authors = ["Joachim Rütter <me@mynetx.net>"]
+description = "Syntax highlighting and IntelliSense for Statamic Antlers in Zed"
+repository = "https://github.com/mynetx/zed-statamic-antlers"
 
-[grammars.twig]
-repository = "https://github.com/jannisborgers/tree-sitter-twig"
-commit = "723926cff978453c40ee11ca8046de0cb248873c"
+[grammars.antlers]
+repository = "https://github.com/Robertsson/tree-sitter-antlers"
+commit = "ed922d8e2d681f2744c417fb2f6edbd6902ea5f9"
 
-[language_servers.twiggy-language-server]
-name = "Twiggy Language Server"
-language = "Twig"
+[language_servers.vscode-antlers-language-server]
+name = "Statamic Antlers Language Server"
+language = "Statamic Antlers"
