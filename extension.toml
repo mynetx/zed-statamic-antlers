@@ -1,15 +1,15 @@
 id = "statamic-antlers"
 name = "Statamic Antlers"
-version = "0.1.0"
+version = "0.2.0"
 schema_version = 1
 authors = ["Joachim Rütter <me@mynetx.net>"]
 description = "Syntax highlighting and IntelliSense for Statamic Antlers in Zed"
 repository = "https://github.com/mynetx/zed-statamic-antlers"
 
 [grammars.antlers]
-repository = "https://github.com/Robertsson/tree-sitter-antlers"
+repository = "https://github.com/eugene-karuna/tree-sitter-antlers"
 commit = "b787c59dfc69fa753e1f62d0bcb01db69eb5e0a4"
 
-[language_servers.vscode-antlers-language-server]
+[language_servers.antlers-language-server]
 name = "Statamic Antlers Language Server"
 language = "Statamic Antlers"
